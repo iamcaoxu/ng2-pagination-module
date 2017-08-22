@@ -1,0 +1,20 @@
+<!--分页组件-->
+<div class="col-md-12 text-right margin-bottom" *ngIf="recordCount>0">
+  <a class="pull-left text-sm">总计 {{recordCount}} 条，第 {{selectedPageNo}} / {{pageCount}} 页</a>
+  <button class="btn btn-default previous" [disabled]="selectedPageNo==1"
+          (click)="onFirstPage($event)"><<</button>
+  <button class="btn btn-default next" (click)="onPreviousPage($event)"
+          [disabled]="selectedPageNo==1">上一页</button>
+  <!--<button class="btn btn-default" [ngStyle]="{'border-color':page===selectedPageNo?'#2e6da':'#ccc'}" (click)="onPageChanged(page)"  *ngFor="let page of pageList">
+    {{page}} {{selectedPageNo}}
+  </button>-->
+    <button class="btn btn-default" [ngClass]="{'selectedstate':page===selectedPageNo}" (click)="onPageChanged(page)"  *ngFor="let page of pageList">
+    {{page}}
+  </button>
+  <button class="btn btn-default next" (click)="onNextPage($event)" [disabled]="selectedPageNo==pageCount">下一页</button>
+  <button class="btn btn-default previous" [disabled]="selectedPageNo==pageCount"
+          (click)="onLastPage($event)">>></button>
+</div>
+<div class="col-md-12 text-center text-sm text-dark-gray" *ngIf="recordCount<=0">
+  总计 0 条
+</div>

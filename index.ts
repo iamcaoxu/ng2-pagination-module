@@ -1,0 +1,1 @@
+export * from './src/paging/paging.module';

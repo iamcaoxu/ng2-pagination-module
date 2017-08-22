@@ -1,0 +1,27 @@
+{
+  "name": "ng2-pagination-module",
+  "version": "1.0.0",
+  "description": "pagination module for pagination",
+  "main": "index.js",
+  "author": "caoxu",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "@angular/forms": "~4.0.0",
+    "@angular/platform-browser": "4.0.3",
+    "core-js": "^2.5.0",
+    "ng2-pagination-module": "^1.0.0",
+    "rxjs": "5.0.1",
+    "zone.js": "0.8.4"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.43",
+    "@types/node": "^7.0.22",
+    "typescript": "2.3.3"
+  }
+}

@@ -1,0 +1,24 @@
+{
+   "typeRoots": [
+      "node_modules/@types"
+    ],
+  "compilerOptions": {
+    "target": "es5",
+    "types": ["core-js"],
+    "lib": ["es5", "es6", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "declaration": false
+
+  },
+  "files": [ "index.ts" ],
+  "exclude": [
+    "node_modules/",
+    "./typings/"
+  ]
+}
