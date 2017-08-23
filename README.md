@@ -32,11 +32,13 @@ export class ExampleModule{
 Go to your component(parent component) template file(.html) and write pagination tag in the place where you need it.</br></br>
 <code>&lt;page [params]="params" (pageChanged)="onPageChanged($event)">&lt;/page></code>
 </br></br>
-The property 'params' is sent to pagination component by the parent component and the key could be 'recordCount','pageSize' or 'shownPageCountMax'.</br></br>
+The property 'params' is sent to pagination component by the parent component and the key could be 'recordCount','pageSize','shownPageCountMax' or 'lang'.</br></br>
 <strong>The detail explanations:</strong><br>
 1.<strong>recordCount:</strong>	the total record number</br>
 2.<strong>pageSize:</strong>	the page size</br>
 3.<strong>shownPageCountMax:</strong> Max nubmer of page shown in the web page</br> 
+4.<strong>lang:</strong> shown language, the value could be 'en'(English) or 'chn'(Chinese, default)</br> 
+
 
 + Step 5<br/>
 Go to your component(parent component) file(.ts) and process the emitted event.
