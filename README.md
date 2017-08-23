@@ -11,21 +11,21 @@ Install the module with npm like below.<br/>
 Go to your module declaration file(.ts) and import the module like below.</br>
 <pre><code>import { NgModule } from '@angular/core';<br>
 import {PagingModule} from 'ng2-pagination-module';<br>
-@NgModule({<br>
-    imports:<br>
+@NgModule({
+    imports:
     [  
-        // your other modules here<br> 
-        PagingModule<br>
-    ],<br> 
-    declarations:<br> 
+       // your other modules here
+        PagingModule
+    ],
+    declarations:
     [
-        //your components here<br> 
-    ],<br> 
-    providers:[<br> 
-        //your service here<br> 
-    ]<br> 
-})<br> 
-export class ExampleModule{<br> 
+        //your components here
+    ],
+    providers:[
+        //your service here
+    ]
+})
+export class ExampleModule{
 }</code></pre>
 
 + Step 4<br/>
@@ -39,12 +39,12 @@ The property 'params' is sent to pagination component by the parent component an
 
 + Step 5<br/>
 Go to your component(parent component) file(.ts) and process the emitted event.
-<pre><code>public onPageChanged(state:PageState):void{<br/>
-        console.log("got state from page component:"+state);{<br/>
-        let count = state.pageCount;//the total number{<br/>
-        let pageNo = state.pageNo;//the page number to show{<br/>
-        let pageSize = state.pageSize; // the page size{<br/>
-        //your code here to get pagination data with 'pageNo' and 'pageSize '<br/>
+<pre><code>public onPageChanged(state:PageState):void{
+        console.log("got state from page component:"+state);
+        let count = state.pageCount;//the total number
+        let pageNo = state.pageNo;//the page number to show
+        let pageSize = state.pageSize; // the page size
+        //your code here to get pagination data with 'pageNo' and 'pageSize '
  }</code></pre>
 
 
