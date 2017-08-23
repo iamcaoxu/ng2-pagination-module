@@ -9,7 +9,7 @@ Install the module with npm like below.<br/>
 <strong><i>npm install ng2-pagination-module</i></strong>
 + Step 3<br/>
 Go to your module declaration file(.ts) and import the module like below.
-<code>import { NgModule } from '@angular/core';<br>
+<code style="white-space:normal;word-break:break-all">import { NgModule } from '@angular/core';<br>
 import {PagingModule} from 'ng2-pagination-module';<br>
 @NgModule({<br>
     imports:<br>
@@ -38,7 +38,7 @@ The property 'params' is sent to pagination component by the parent component an
 
 + Step 5<br/>
 Go to your component(parent component) file(.ts) and process the emitted event.
-<code>public onPageChanged(state:PageState):void{<br/>
+<code style="white-space:normal;word-break:break-all">public onPageChanged(state:PageState):void{<br/>
         console.log("got state from page component:"+state);{<br/>
         let count = state.pageCount;//the total number{<br/>
         let pageNo = state.pageNo;//the page number to show{<br/>
