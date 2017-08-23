@@ -8,8 +8,8 @@ Make sure Node is properly installed in your computer and bootstrap css is impor
 Install the module with npm like below.<br/>
 <strong><i>npm install ng2-pagination-module</i></strong>
 + Step 3<br/>
-Go to your module declaration file(.ts) and import the module like below.
-<code style="white-space:normal;word-break:break-all">import { NgModule } from '@angular/core';<br>
+Go to your module declaration file(.ts) and import the module like below.</br>
+<pre><code>import { NgModule } from '@angular/core';<br>
 import {PagingModule} from 'ng2-pagination-module';<br>
 @NgModule({<br>
     imports:<br>
@@ -26,10 +26,11 @@ import {PagingModule} from 'ng2-pagination-module';<br>
     ]<br> 
 })<br> 
 export class ExampleModule{<br> 
-}</code> 
+}</code></pre>
+
 + Step 4<br/>
 Go to your component(parent component) template file(.html) and write pagination tag in the place where you need it.</br></br>
-<code>\<page [params]="params" (pageChanged)="onPageChanged($event)"></page></code></br></br>
+<pre><code>\<page [params]="params" (pageChanged)="onPageChanged($event)"></page></pre></code></br>
 The property 'params' is sent to pagination component by the parent component and the key could be 'recordCount','pageSize' or 'shownPageCountMax'.</br></br>
 <strong>The detail explanations:</strong><br>
 1.<strong>recordCount:</strong>	the total record number</br>
@@ -38,13 +39,13 @@ The property 'params' is sent to pagination component by the parent component an
 
 + Step 5<br/>
 Go to your component(parent component) file(.ts) and process the emitted event.
-<code style="white-space:normal;word-break:break-all">public onPageChanged(state:PageState):void{<br/>
+<pre><code>public onPageChanged(state:PageState):void{<br/>
         console.log("got state from page component:"+state);{<br/>
         let count = state.pageCount;//the total number{<br/>
         let pageNo = state.pageNo;//the page number to show{<br/>
         let pageSize = state.pageSize; // the page size{<br/>
         //your code here to get pagination data with 'pageNo' and 'pageSize '<br/>
- }</code>
+ }</code></pre>
 
 
 
